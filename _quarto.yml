@@ -1,0 +1,4 @@
+project: 
+  title: "HPC!"
+  type: website
+  output-dir: slides-html

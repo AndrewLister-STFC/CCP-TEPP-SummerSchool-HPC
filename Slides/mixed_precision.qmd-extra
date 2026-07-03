@@ -1,0 +1,38 @@
+# Choosing Precision
+
+## Float representation
+
+![](../images/floating_point.svg)
+
+## The highs and lows
+
+::: {.columns}
+::: {.column}
+### Low precision
+
+:x: Large error
+
+:heavy_check_mark: High throughput (flops/second)
+
+:heavy_check_mark: Low memory requirements
+
+:heavy_check_mark: Low energy requirements
+
+:::
+::: {.column}
+### High precision
+
+:heavy_check_mark: Small error
+
+:x: Low throughput
+
+:x: High memory requirements
+
+:x: High energy requirements
+:::
+:::
+
+## Exercise 3
+
+Go back to the ``matmult_blas`` code. Compare what happend when you use ``sgemm`` and ``float`` instead of ``dgemm`` and ``double``.
+

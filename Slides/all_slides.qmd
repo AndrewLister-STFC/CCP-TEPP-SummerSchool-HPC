@@ -1,0 +1,42 @@
+---
+title: "HPC!"
+subtitle: "CCP-TEPP SummerSchool 2026"
+author: "Andrew Lister"
+institute: "UKRI - STFC"
+format:
+  revealjs:
+    navigation-mode: vertical
+    theme: serif
+toc: true
+toc-depth: 1
+toc-title: Outline
+
+transition: fade
+
+from: markdown+emoji
+---
+
+# Preamble
+
+## Disclaimers
+
+This is a scattershot of content from the following (in development courses) with some additions...
+
+- [HPC Advanced User](https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/index.html)
+- [Using High-Performance Computing Systems](https://carpentries-incubator.github.io/hpc-intro/index.html)
+
+## Goals!
+
+- Understand how language choice and platform affect decisions in implementation
+- Run an mpi code to see Amdahls law in action
+- Know what strong and weak scaling mean
+
+{{< include cache.qmd-extra >}}
+{{< include scaling.qmd-extra >}}
+{{< include mixed_precision.qmd-extra >}}
+
+# Final comments
+
+- Check that arrays are accessed contiguously
+- Parallelism can only help with the parallel bits!
+- If you don't need the accuracy, don't compute it

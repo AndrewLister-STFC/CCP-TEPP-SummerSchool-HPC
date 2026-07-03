@@ -1,0 +1,86 @@
+# Scaling
+
+## Parallel computing
+
+- If two results don't depend on each other, the can be done at the same time!
+
+$$
+D_\text{prod} = \left(\sum_{i=0}^{N/2 - 1} X_i * Y_i\right) + \left(\sum_{i=N/2}^{N - 1} X_i * Y_i\right) 
+$$
+
+## Speedup
+
+The standard way of expressing the improvement is
+
+$$
+\text{speedup} = \frac{\text{time without optimisation}}{\text{time with optimisation}}
+$$
+
+## Strong scaling
+
+How does parallelism affect the time to complete a fixed input?
+
+![](../plots/scaling_concept.svg)
+
+## Why don't we always get perfect scaling? {center=true}
+
+
+::: {.columns}
+::: {.column width="30%"}
+![](../plots/workload_example_1.svg)
+![](../plots/workload_example_4.svg)
+:::
+::: {.column width="30%"}
+![](../plots/workload_example_2.svg)
+![](../plots/workload_example_8.svg)
+:::
+:::
+
+## Exercise 2
+
+Let's see this in action with an emulation.
+
+1. ``pixi init``
+2. ``pixi add python mpi4py``
+3. ``pixi add --pypi amdahl``
+4. ``pixi run mpiexec -n 2 amdahl -w 10 -p 0.5``
+
+## Challenge 2
+
+- Run for a range of number of processors for ``-p 0.9``.
+- Note the speedup as you increase the number of processors.
+- What trend are you seeing?
+- What about for ``-p 0.25``?
+
+## Amdahls law
+
+$$
+\text{s} = \frac{1}{(1-p) + \frac{p}{N}}
+$$
+where $s$ is the overall speedup, $p$ is the fraction of the program that can be paralellised,
+and $N$ is the number of parallel processes.
+
+- $p=0.9$, $N=4$ -> $s=3.08$
+- $p=0.25$, $N=2$ -> $s=1.14$
+
+## Weak scaling
+
+How does parallelism affect the time if the problem size increases proportionally?
+
+$$
+D_\text{prod} = \sum_{i=0}^{N - 1} X_i * Y_i
+$$
+
+## Challenge 3
+
+- Perform a weak scaling test by increasing the work proportionally to the number of processors for ``p = 0.9`` and ``p = 0.25``
+- Scale the runtime by the size of the problem before calculating your speedup
+
+## Gustafsons law
+
+$$
+\text{s} = (1-p) + p*N
+$$
+where $s$ is the overall speedup, $p$ is the fraction of the program that can be paralellised,
+and $N$ is the number of parallel processes (and the scale of the problem size).
+

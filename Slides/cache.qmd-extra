@@ -1,0 +1,46 @@
+# Cache
+
+## Computer Model (concept)
+
+![Dot product in a computer](https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/fig/dot_prod_fig.jpg)
+
+::: footer
+<https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/performance-concepts.html>
+:::
+
+## Computer model (actual)
+
+![Memory layout](https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/fig/Memory_Hierarchy.jpg)
+
+::: footer
+<https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/performance-concepts.html>
+:::
+
+## Matrix multiplication
+
+![](https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/fig/matmult_fig.jpg)
+
+::: footer
+<https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/performance-concepts.html>
+:::
+
+## Exercise 1
+
+1. Download and unpack <https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/data/code.zip>
+2. Check the effect of cache (in a language of your choice)
+
+::: footer
+<https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/performance-concepts.html>
+:::
+
+## Challenge 1 *(c or fortran example)
+
+How does optimisation affect matmult, matmult_swapped, and matmult_blas?
+
+::: footer
+<https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/performance-concepts.html>
+:::
+
+## Flops
+
+<https://carpentries-incubator.github.io/HPC_Advanced_User-Teaching-performance-programming-to-scientists/parallel-concepts.html#optimizing-scalar-code>
