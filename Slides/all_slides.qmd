@@ -1,5 +1,5 @@
 ---
-title: "HPC!"
+title: "High Performance Techniques!"
 subtitle: "CCP-TEPP SummerSchool 2026"
 author: "Andrew Lister"
 institute: "UKRI - STFC"
